@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.venv/
+.venv-*/
+venv/
+env/
+build/
+dist/
+*.egg-info/
+
+# Node / frontend tooling (the shipped frontend itself has no npm build)
+node_modules/
+coverage/
+
+# Secrets and local config
+.env
+.env.*
+!.env.example
+
+# Logs, temporary and editor files
+*.log
+*.tmp
+*.bak
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/

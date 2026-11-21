@@ -1,0 +1,22 @@
+{
+  "method": "two_timescale_adaptive_backhaul",
+  "description": "Explicit controller assumptions; not measured modem parameters.",
+  "initial_arrival_rate_pps": 0.0,
+  "arrival_rate_ewma_alpha": 0.2,
+  "maximum_expected_packets": 10000.0,
+  "minimum_dwell_s": 2.0,
+  "improvement_threshold": 0.1,
+  "minimum_reliability_pct": null,
+  "idle_power_w": {
+    "NB-IoT": 0.0,
+    "5G NR": 0.0
+  },
+  "expected_idle_seconds_per_session": 0.0,
+  "switching_energy_j": 0.0,
+  "notes": [
+    "The current simulation accounts for modem setup and transmission energy but does not model modem idle-tail power.",
+    "Idle power is zero by default to preserve the existing model boundary; nonzero values require external measurement or explicit sensitivity assumptions.",
+    "The expected number of packets in an arrival burst is estimated from the observed Poisson inter-arrival EWMA and the modem tail timer using exp(lambda * T).",
+    "The maximum expected packet count caps the analytical forecast and is configurable."
+  ]
+}

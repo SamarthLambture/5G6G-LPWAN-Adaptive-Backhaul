@@ -1,0 +1,19 @@
+{
+  "analysis": "Two-timescale controller analytical operating regions",
+  "generated_by": "Framework/experiments/analyze_two_timescale_regions.py",
+  "simulation_executed": false,
+  "historical_results_modified": false,
+  "link_parameters_source": "Existing BackhaulModem defaults in Framework/src/simulation/network.py",
+  "tail_timer_s": 2.0,
+  "expected_poisson_burst_size": "min(10000, exp(lambda_pps * tail_timer_s))",
+  "energy_model": "setup energy due now amortized over expected burst size + per-packet transmit energy",
+  "idle_tail_power": "Excluded because the original model does not define it; break_even_idle_energy.csv reports required thresholds only.",
+  "limitations": [
+    "Analytical operating-region analysis, not discrete-event network simulation.",
+    "Assumes Poisson arrivals and a fixed modem tail timer.",
+    "Uses model setup and transmit parameters, not hardware measurements.",
+    "Does not include modem idle-tail power, switching energy, queue contention, or stochastic reliability outcomes.",
+    "The controller's runtime arrival-rate EWMA will differ from the fixed offered-load values used for this sweep."
+  ],
+  "rows": 72
+}

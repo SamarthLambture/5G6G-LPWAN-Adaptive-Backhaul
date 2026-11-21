@@ -1,0 +1,10 @@
+{
+  "outage_start_s": 40.0,
+  "outage_end_s": 60.0,
+  "outage_decisions": 1078,
+  "outage_all_selected_nb_iot": true,
+  "post_outage_decisions": 3491,
+  "post_outage_5g_selections": 3363,
+  "post_outage_nb_selections": 128,
+  "post_outage_5g_share": 0.9633342881695789
+}

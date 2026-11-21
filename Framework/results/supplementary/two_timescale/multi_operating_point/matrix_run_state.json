@@ -1,0 +1,11 @@
+{
+  "status": "completed",
+  "complete_conditions": 30,
+  "total_conditions": 30,
+  "completed_condition_id": "load_8_emergency_0p25_outage_repeated",
+  "completed_seeds_in_condition": 30,
+  "seed_count_per_condition": 30,
+  "elapsed_wall_seconds": 330.8939351000008,
+  "last_condition_wall_seconds": 24.036884599991026,
+  "historical_results_modified": false
+}

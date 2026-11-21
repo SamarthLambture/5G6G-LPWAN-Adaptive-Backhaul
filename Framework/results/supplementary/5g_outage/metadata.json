@@ -1,0 +1,24 @@
+{
+  "scenario": "K_5G_OUTAGE_SUPPLEMENTARY",
+  "duration_s": 3600.0,
+  "outage_start_s": 2000.0,
+  "outage_duration_s": 30.0,
+  "seeds": [
+    1000,
+    1001,
+    1002,
+    1003,
+    1004
+  ],
+  "algorithms": [
+    "NB",
+    "5G",
+    "LAT",
+    "ENG",
+    "TOP",
+    "AHP"
+  ],
+  "rows": 30,
+  "primary_24_scenario_matrix_modified": false,
+  "seed_execution": "one independent Python process per seed"
+}

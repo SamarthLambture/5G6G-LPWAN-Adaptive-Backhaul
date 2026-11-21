@@ -1,0 +1,38 @@
+{
+  "ADAPTIVE_AHP_TOPSIS": {
+    "seeds": 30,
+    "generated_packets": 7051,
+    "delivered_packets": 6828,
+    "pooled_pdr": 0.9683732803857609,
+    "emergency_generated": 699,
+    "emergency_delivered": 599,
+    "pooled_emergency_pdr": 0.8569384835479256,
+    "total_modelled_energy_j": 205.12570072727226,
+    "energy_per_delivered_packet_j": 0.030041842520104313,
+    "qos_drops": 92,
+    "outage_drops": 2,
+    "reliability_drops": 128,
+    "nb_selections": 1338,
+    "5g_selections": 5621,
+    "packet_selection_changes": 60,
+    "mean_decision_time_us_across_seeds": 269.3612371887364
+  },
+  "TWO_TIMESCALE": {
+    "seeds": 30,
+    "generated_packets": 7051,
+    "delivered_packets": 6837,
+    "pooled_pdr": 0.9696496950787122,
+    "emergency_generated": 699,
+    "emergency_delivered": 599,
+    "pooled_emergency_pdr": 0.8569384835479256,
+    "total_modelled_energy_j": 205.32728472727223,
+    "energy_per_delivered_packet_j": 0.030031780711901743,
+    "qos_drops": 92,
+    "outage_drops": 2,
+    "reliability_drops": 119,
+    "nb_selections": 1206,
+    "5g_selections": 5753,
+    "packet_selection_changes": 62,
+    "mean_decision_time_us_across_seeds": 42.93206096870279
+  }
+}

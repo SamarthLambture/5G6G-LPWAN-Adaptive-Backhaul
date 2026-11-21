@@ -1,0 +1,49 @@
+LPWAN EDGE INTELLIGENCE — SIMULATION TEST RESULTS
+Build: 1.2.0
+Date: 2026-11-21
+
+Automated Node.js tests
+-----------------------
+Command: node --test tests/*.test.cjs
+Result: 32 passed, 0 failed, 0 skipped
+
+Coverage includes:
+- HTML entry point, CSS, logo, and data export asset presence
+- Missing topology image reference removal
+- All 11 dashboard views render from bundled app-data.json
+- Successful dashboard startup and data-ready state
+- Clear reporting of failed data requests
+- Browser simulation processes 1,000 seeded packets
+- AHP state classification, weights, reciprocal matrix, and TOPSIS behavior
+- Archived primary data boundaries and fixed-5G/adaptive-AHP result parity
+- Research impact page caveats and TSC evidence boundary
+- Optional API bridge and sibling Framework dependency contract
+
+JavaScript syntax
+-----------------
+node --check frontend/app.js: PASS
+node --check frontend/simulation-engine.js: PASS
+
+Python validation
+-----------------
+python -m py_compile run_app.py verify_project.py backend/api.py backend/run_api.py: PASS
+python verify_project.py: PASS
+Primary CSV: 4,320 rows; 24 scenarios; 30 seeds; 6 algorithms; unique keys.
+
+Local HTTP smoke test
+---------------------
+GET /: HTTP 200
+GET /index.html: HTTP 200
+GET /app.js: HTTP 200
+GET /app.css: HTTP 200
+GET /simulation-engine.js: HTTP 200
+GET /data/app-data.json: HTTP 200
+GET /data/primary_results/raw_paired_metrics.csv: HTTP 200
+GET /assets/iiit-raichur-logo.png: HTTP 200
+GET /healthz: HTTP 200 and ok=true
+Port 8765 occupied: second launcher returned the expected actionable port-in-use message.
+
+Not verified in this archive-only environment
+----------------------------------------------
+The optional FastAPI/SimPy bridge was not run end-to-end because the uploaded archive contains Simulation/ but not its required sibling Framework/ source. The health endpoint now reports the missing dependency explicitly. The browser interface and recorded data do not require this bridge.
+A full interactive visual pass in Chrome/Edge on the user's Windows machine remains a final local check.

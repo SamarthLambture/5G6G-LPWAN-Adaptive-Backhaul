@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="920" viewBox="0 0 1500 920">
+<defs>
+  <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M1,1 L11,6 L1,11 z" fill="#334155"/></marker>
+  <marker id="arrowBlue" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M1,1 L11,6 L1,11 z" fill="#2563eb"/></marker>
+  <style>
+    .title{font:700 30px Arial,sans-serif;fill:#0f172a}.subtitle{font:16px Arial,sans-serif;fill:#475569}
+    .head{font:700 20px Arial,sans-serif;fill:#0f172a}.body{font:15px Arial,sans-serif;fill:#334155}.small{font:13px Arial,sans-serif;fill:#64748b}
+    .card{fill:#f8fafc;stroke:#94a3b8;stroke-width:2;rx:16}.blue{fill:#eff6ff;stroke:#3b82f6;stroke-width:2;rx:16}
+    .green{fill:#ecfdf5;stroke:#10b981;stroke-width:2;rx:16}.orange{fill:#fff7ed;stroke:#f59e0b;stroke-width:2.5;stroke-dasharray:10 7;rx:16}
+    .line{fill:none;stroke:#334155;stroke-width:3;marker-end:url(#arrow)}.blueline{fill:none;stroke:#2563eb;stroke-width:3;marker-end:url(#arrowBlue)}
+    .dashed{fill:none;stroke:#d97706;stroke-width:3;stroke-dasharray:10 8;marker-end:url(#arrow)}
+  </style>
+</defs>
+<rect width="1500" height="920" fill="#ffffff"/>
+<text x="750" y="55" text-anchor="middle" class="title">Unified LPWAN–Cellular Backhaul Selection Architecture</text>
+<text x="750" y="85" text-anchor="middle" class="subtitle">Gateway-side technology abstraction · runnable NB-IoT / 5G NR · exploratory IMT-2030 extension point</text>
+
+<!-- device/access -->
+<rect x="55" y="160" width="250" height="190" class="card"/>
+<text x="180" y="198" text-anchor="middle" class="head">LPWAN Device Domain</text>
+<text x="180" y="235" text-anchor="middle" class="body">LoRaWAN IoT devices</text>
+<text x="180" y="264" text-anchor="middle" class="body">Routine telemetry</text>
+<text x="180" y="292" text-anchor="middle" class="body">Emergency / event packets</text>
+<text x="180" y="325" text-anchor="middle" class="small">PHY/MAC abstracted in this model</text>
+
+<path d="M305 255 L375 255" class="line"/>
+<rect x="375" y="160" width="265" height="190" class="blue"/>
+<text x="507" y="198" text-anchor="middle" class="head">LPWAN Gateway</text>
+<text x="507" y="235" text-anchor="middle" class="body">Packet aggregation</text>
+<text x="507" y="264" text-anchor="middle" class="body">Classification and buffering</text>
+<text x="507" y="293" text-anchor="middle" class="body">CPU / queue state</text>
+<text x="507" y="325" text-anchor="middle" class="small">Shared cellular modem context</text>
+
+<path d="M640 255 L710 255" class="line"/>
+<rect x="710" y="135" width="335" height="240" class="blue"/>
+<text x="877" y="175" text-anchor="middle" class="head">Gateway Decision Plane</text>
+<text x="877" y="214" text-anchor="middle" class="body">Availability + QoS feasibility</text>
+<text x="877" y="244" text-anchor="middle" class="body">AHP-TOPSIS baseline</text>
+<text x="877" y="274" text-anchor="middle" class="body">Two-Timescale Controller</text>
+<text x="877" y="304" text-anchor="middle" class="body">Session preference + packet override</text>
+<text x="877" y="344" text-anchor="middle" class="small">Normalized backhaul candidate contract</text>
+
+<path d="M1045 255 L1110 255 L1110 180 L1160 180" class="blueline"/>
+<path d="M1110 255 L1110 400 L1160 400" class="blueline"/>
+<path d="M1110 400 L1110 620 L1160 620" class="dashed"/>
+
+<rect x="1160" y="110" width="285" height="145" class="green"/>
+<text x="1302" y="150" text-anchor="middle" class="head">NB-IoT Adapter</text>
+<text x="1302" y="183" text-anchor="middle" class="body">Runnable SimPy profile</text>
+<text x="1302" y="214" text-anchor="middle" class="small">Configured model metrics</text>
+
+<rect x="1160" y="325" width="285" height="145" class="green"/>
+<text x="1302" y="365" text-anchor="middle" class="head">5G NR Adapter</text>
+<text x="1302" y="398" text-anchor="middle" class="body">Runnable SimPy profile</text>
+<text x="1302" y="429" text-anchor="middle" class="small">Configured model metrics</text>
+
+<rect x="1160" y="545" width="285" height="150" class="orange"/>
+<text x="1302" y="585" text-anchor="middle" class="head">IMT-2030 / 6G</text>
+<text x="1302" y="618" text-anchor="middle" class="body">Exploratory profile template</text>
+<text x="1302" y="648" text-anchor="middle" class="small">No numeric metrics / not selectable</text>
+<text x="1302" y="675" text-anchor="middle" class="small">No 6G radio or core implementation</text>
+
+<!-- endpoint arrows -->
+<path d="M1445 182 L1470 182" stroke="#334155" stroke-width="3" fill="none"/>
+<path d="M1445 397 L1470 397" stroke="#334155" stroke-width="3" fill="none"/>
+<path d="M1470 182 L1470 765 L1090 765" class="line"/>
+<rect x="820" y="710" width="270" height="110" class="card"/>
+<text x="955" y="753" text-anchor="middle" class="head">Cloud / Application</text>
+<text x="955" y="784" text-anchor="middle" class="body">Successful packet endpoint</text>
+
+<!-- interface contract -->
+<rect x="55" y="425" width="650" height="285" class="card"/>
+<text x="380" y="466" text-anchor="middle" class="head">Technology-Agnostic Candidate Interface</text>
+<text x="95" y="510" class="body">• Stable profile identity and maturity status</text>
+<text x="95" y="545" class="body">• Availability and predicted latency</text>
+<text x="95" y="580" class="body">• Reliability and bandwidth</text>
+<text x="95" y="615" class="body">• Transmission / setup energy and modem state</text>
+<text x="95" y="650" class="body">• Queue/service adapter and outage/recovery hooks</text>
+<text x="95" y="686" class="small">One normalized contract; protocol-specific behaviour stays inside adapters.</text>
+
+<path d="M877 375 L877 520 L705 520" class="line"/>
+<text x="750" y="900" text-anchor="middle" class="small">Scope: logical gateway-side backhaul selection. 6G is an architecture extension point, not a simulated or standardized radio implementation.</text>
+</svg>

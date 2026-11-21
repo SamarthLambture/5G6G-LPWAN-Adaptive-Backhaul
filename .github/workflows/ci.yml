@@ -1,0 +1,42 @@
+name: Project validation
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  python-simulation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Install simulation dependencies
+        run: python -m pip install -r Framework/requirements.txt
+      - name: Compile Python source
+        working-directory: Framework
+        run: python -m compileall -q src experiments tests
+      - name: Run Python tests
+        working-directory: Framework
+        run: python -m pytest -v
+
+  web-application:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Check JavaScript syntax and tests
+        working-directory: Simulation
+        run: |
+          node --check frontend/app.js
+          node --check frontend/simulation-engine.js
+          node --test tests/*.test.cjs
+      - name: Verify bundled data and source paths
+        working-directory: Simulation
+        run: python verify_project.py

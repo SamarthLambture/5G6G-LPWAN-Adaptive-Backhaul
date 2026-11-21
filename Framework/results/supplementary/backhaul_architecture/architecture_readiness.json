@@ -1,0 +1,96 @@
+{
+  "title": "Technology-agnostic backhaul architecture readiness audit",
+  "scope": "profile/catalog/interface validation; not a radio or end-to-end network simulation",
+  "catalog": {
+    "catalog_version": "1.0",
+    "profiles": [
+      {
+        "profile_id": "nb_iot",
+        "display_name": "NB-IoT",
+        "radio_family": "3GPP cellular LPWAN",
+        "generation": "LTE / NB-IoT (IMT-2020-era cellular technology)",
+        "status": "implemented_simulated",
+        "selection_enabled": true,
+        "is_simulation_selectable": true,
+        "capability_tags": [
+          "massive_iot",
+          "wide_area_low_power",
+          "low_rate_telemetry"
+        ],
+        "design_principles": [],
+        "specification_basis": "Existing project NB-IoT-style abstracted backhaul model",
+        "metric_provenance": "Framework/src/simulation/network.py configured simulation parameters",
+        "notes": "Implemented as an abstracted cellular backhaul candidate; not a standards-complete modem stack."
+      },
+      {
+        "profile_id": "5g_nr",
+        "display_name": "5G NR",
+        "radio_family": "3GPP cellular NR",
+        "generation": "5G / IMT-2020",
+        "status": "implemented_simulated",
+        "selection_enabled": true,
+        "is_simulation_selectable": true,
+        "capability_tags": [
+          "enhanced_mobile_broadband",
+          "massive_machine_type_communications",
+          "urlcc_related_capabilities"
+        ],
+        "design_principles": [],
+        "specification_basis": "Existing project 5G-NR-style abstracted backhaul model",
+        "metric_provenance": "Framework/src/simulation/network.py configured simulation parameters",
+        "notes": "Implemented as an abstracted cellular backhaul candidate; not a standards-complete 5G core or radio implementation."
+      },
+      {
+        "profile_id": "imt_2030_6g_template",
+        "display_name": "IMT-2030 / 6G (exploratory profile)",
+        "radio_family": "Future IMT-2030 terrestrial radio interface",
+        "generation": "IMT-2030 (6G research direction)",
+        "status": "exploratory_template",
+        "selection_enabled": false,
+        "is_simulation_selectable": false,
+        "capability_tags": [
+          "immersive_communication",
+          "hyper_reliable_low_latency_communication",
+          "massive_communication",
+          "ubiquitous_connectivity",
+          "ai_and_communication",
+          "integrated_sensing_and_communication"
+        ],
+        "design_principles": [
+          "security_and_resilience",
+          "connecting_the_unconnected",
+          "ubiquitous_intelligence",
+          "sustainability"
+        ],
+        "specification_basis": "ITU-R Recommendation M.2160-0 (2023) and the IMT-2030 development process; 2026 draft requirements/evaluation documents are not treated as finalized radio-interface specifications.",
+        "metric_provenance": "None: no 6G latency, energy, reliability or bandwidth values are asserted by this project.",
+        "notes": "Architecture-only extension point. Not selectable in the current simulator; no 6G radio, core, candidate RIT/SRIT or measured performance is implemented."
+      }
+    ],
+    "selectable_profile_ids": [
+      "nb_iot",
+      "5g_nr"
+    ],
+    "exploratory_profile_ids": [
+      "imt_2030_6g_template"
+    ],
+    "6g_radio_metrics_present": false,
+    "6g_radio_metrics_status": "not supplied; IMT-2030 is represented as a capability template only"
+  },
+  "three_candidate_contract_probe": {
+    "status": "passed",
+    "candidate_count": 3,
+    "selected_index": 2,
+    "selected_candidate_label": "Third adapter (synthetic contract fixture)",
+    "fixture_type": "synthetic_interface_contract_test_only",
+    "is_6g_performance_evidence": false,
+    "note": "Proves the controller can process a third candidate index; values are synthetic and make no radio-performance claim."
+  },
+  "conclusions": {
+    "nb_iot_and_5g_nr_profiles": "implemented_simulated",
+    "imt_2030_6g_profile": "architecture_only_exploratory_template_not_selectable",
+    "6g_performance_values": "not supplied; no 6G performance claims permitted",
+    "controller_candidate_cardinality": "supports_more_than_two_candidate_indices at the decision-context API",
+    "end_to_end_6g_adapter": "not implemented"
+  }
+}

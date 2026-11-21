@@ -1,0 +1,21 @@
+{
+  "analysis": "Short paired SimPy validation of the two-timescale controller",
+  "seeds": [
+    1000,
+    1001,
+    1002
+  ],
+  "duration_s": 120.0,
+  "offered_load_pps": 2.0,
+  "emergency_ratio": 0.1,
+  "event": {
+    "type": "5G_OUTAGE",
+    "start_s": 40.0,
+    "duration_s": 20.0
+  },
+  "wall_runtime_s": 0.33291419998568017,
+  "paired_input_traces": true,
+  "historical_results_modified": false,
+  "statistical_power": "Smoke validation only; too few seeds/short duration for confirmatory performance claims.",
+  "idle_tail_power": "Excluded: the existing model does not define idle modem power."
+}

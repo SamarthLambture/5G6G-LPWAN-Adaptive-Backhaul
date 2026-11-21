@@ -1,0 +1,9 @@
+Payload_Bytes,State,Highest_NB_Selecting_Scale,NB_Selection_Count,Tested_Scales,Interpretation
+50,NORMAL,0.12,12,100,Hypothetical energy-estimate perturbation; not a calibrated physical scenario
+50,LOW_BATTERY,0.22,22,100,Hypothetical energy-estimate perturbation; not a calibrated physical scenario
+50,EMERGENCY,Not selected in tested range,0,100,Hypothetical energy-estimate perturbation; not a calibrated physical scenario
+50,CONFLICT,Not selected in tested range,0,100,Hypothetical energy-estimate perturbation; not a calibrated physical scenario
+200,NORMAL,0.12,12,100,Hypothetical energy-estimate perturbation; not a calibrated physical scenario
+200,LOW_BATTERY,0.21,21,100,Hypothetical energy-estimate perturbation; not a calibrated physical scenario
+200,EMERGENCY,Not selected in tested range,0,100,Hypothetical energy-estimate perturbation; not a calibrated physical scenario
+200,CONFLICT,Not selected in tested range,0,100,Hypothetical energy-estimate perturbation; not a calibrated physical scenario

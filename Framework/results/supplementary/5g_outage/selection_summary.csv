@@ -1,0 +1,7 @@
+Algorithm,NB_Selections_During_5G_Outage_Mean,5G_Selections_During_5G_Outage_Mean,5G_Selections_After_Recovery_Mean,Switches_Mean
+NB,57.4,0.0,0.0,0.0
+5G,0.0,0.0,3108.2,0.0
+LAT,57.2,0.0,3108.2,2.0
+ENG,57.2,0.0,3096.6,2.0
+TOP,57.2,0.0,3108.2,2.0
+AHP,57.2,0.0,3098.2,2.0

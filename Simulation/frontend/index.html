@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#071426"><meta name="description" content="Offline-first LPWAN Edge Intelligence simulation and research dashboard for IIIT Raichur.">
+<title>LPWAN Edge Intelligence · IIIT Raichur</title><link rel="icon" type="image/png" href="assets/iiit-raichur-logo.png"><link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div class="shell">
+<aside class="sidebar" id="sidebar">
+  <div class="brand"><img src="assets/iiit-raichur-logo.png" alt="IIIT Raichur logo"><div><b>LPWAN EDGE</b><small>INTELLIGENCE</small></div></div>
+  <div class="inst">INDIAN INSTITUTE OF INFORMATION TECHNOLOGY RAICHUR</div>
+  <div class="nav-label">WORKSPACE</div>
+  <nav id="nav-main">
+    <button class="nav-item active" data-view="overview">◈ <span>Command centre</span><kbd>01</kbd></button>
+    <button class="nav-item" data-view="topology">⌘ <span>Network topology</span><kbd>02</kbd></button>
+    <button class="nav-item" data-view="lab">◉ <span>Interactive lab</span><kbd>03</kbd></button>
+    <button class="nav-item" data-view="decision">∑ <span>Decision inspector</span><kbd>04</kbd></button>
+    <button class="nav-item" data-view="backhaul">⇄ <span>Backhaul comparison</span><kbd>05</kbd></button>
+  </nav>
+  <div class="nav-label">RESEARCH</div>
+  <nav>
+    <button class="nav-item" data-view="analytics">▥ <span>Performance analytics</span></button>
+    <button class="nav-item" data-view="experiments">◫ <span>Experiment explorer</span></button>
+    <button class="nav-item" data-view="explainer">⌬ <span>Project explainer</span></button>
+    <button class="nav-item" data-view="impact">⇧ <span>Our modifications &amp; impact</span><kbd>NEW</kbd></button>
+    <button class="nav-item" data-view="viva">◇ <span>Viva mode</span></button>
+    <button class="nav-item" data-view="integrity">ⓘ <span>Data integrity</span></button>
+  </nav>
+  <div class="sidebar-bottom"><span class="live-dot"></span><div><b>SIMULATION STUDY</b><small>No physical radio deployment</small></div></div>
+  <div class="team-short">COMPUTER NETWORKS · SEMESTER PROJECT<br>Samarth · Shravan · Prathamesh · Ayush</div>
+</aside>
+<main class="main">
+<header class="topbar"><div class="top-left"><button class="icon-btn mobile-menu" id="menu-toggle">☰</button><div><div class="eyebrow" id="kicker">RESEARCH CONTROL CENTRE</div><h1 id="page-title">Command centre</h1></div></div><div class="top-actions"><div class="ready"><i></i><span id="ready-label">DATA LOADING</span><small id="wall-clock">--:--:--</small></div><span class="pill"><i class="cyan-dot"></i>OFFLINE-FIRST</span><button class="icon-btn" id="theme-toggle" title="Toggle theme">◐</button><button class="icon-btn" id="full-toggle" title="Full screen">⛶</button></div></header>
+<section class="content" id="view-root"><div class="loading">Loading source-aligned research data…</div></section>
+<footer class="footer"><span>LPWAN EDGE INTELLIGENCE · IIIT RAICHUR</span><span>Browser demo ≠ fresh SimPy experiment</span><span>APP 1.2.0</span></footer>
+</main></div>
+<div id="modal-root"></div><div id="toast-root" class="toast-root"></div>
+<script src="simulation-engine.js"></script><script src="app.js" defer></script>
+</body></html>

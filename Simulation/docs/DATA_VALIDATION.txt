@@ -1,0 +1,7 @@
+VALIDATION PASSED
+Primary rows: 4320 | scenarios: 24 | seeds: 30 | algorithms: 6 | supplementary outage rows: 30
+App-data JSON sections: present | raw primary keys: unique | dashboard resources: present
+Dashboard renderer checks: 11/11 | seeded browser packets processed: 1000
+Node tests: 32 passed | Python source compilation: passed
+Local HTTP checks: index, JavaScript, CSS, JSON, raw CSV, logo and health endpoint returned HTTP 200
+Optional SimPy bridge: requires sibling Framework/ plus backend/requirements.txt; not bundled in this Simulation-only archive.

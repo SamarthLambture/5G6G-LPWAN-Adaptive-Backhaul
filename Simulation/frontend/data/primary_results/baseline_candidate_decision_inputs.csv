@@ -1,0 +1,9 @@
+State,Packet_Type,Payload_Bytes,Deadline_s,Candidate,Predicted_Latency_s_Initial_Sleep,Instantaneous_Energy_J_Initial_Sleep,Configured_Reliability_pct,Nominal_Bandwidth_bps,QoS_Feasible_At_Initial_Sleep,AHP_CR,AHP_Weights,Interpretation
+NORMAL,Telemetry,50,10.0,NB-IoT,2.006060606060606,1.506060606060606,95.0,66000.0,True,0.0,"0.153846, 0.461538, 0.153846, 0.230769",Initial-sleep marginal estimate; not a horizon-average energy forecast.
+NORMAL,Telemetry,50,10.0,5G NR,0.12000400000000001,0.500012,99.0,100000000.0,True,0.0,"0.153846, 0.461538, 0.153846, 0.230769",Initial-sleep marginal estimate; not a horizon-average energy forecast.
+LOW_BATTERY,Telemetry,50,10.0,NB-IoT,2.006060606060606,1.506060606060606,95.0,66000.0,True,0.0,"0.125000, 0.625000, 0.125000, 0.125000",Initial-sleep marginal estimate; not a horizon-average energy forecast.
+LOW_BATTERY,Telemetry,50,10.0,5G NR,0.12000400000000001,0.500012,99.0,100000000.0,True,0.0,"0.125000, 0.625000, 0.125000, 0.125000",Initial-sleep marginal estimate; not a horizon-average energy forecast.
+EMERGENCY,Emergency,200,1.0,NB-IoT,2.0242424242424244,1.5242424242424242,95.0,66000.0,False,6.579099405186112e-16,"0.500000, 0.125000, 0.250000, 0.125000",Initial-sleep marginal estimate; not a horizon-average energy forecast.
+EMERGENCY,Emergency,200,1.0,5G NR,0.12001600000000001,0.500048,99.0,100000000.0,True,6.579099405186112e-16,"0.500000, 0.125000, 0.250000, 0.125000",Initial-sleep marginal estimate; not a horizon-average energy forecast.
+CONFLICT,Emergency,200,1.0,NB-IoT,2.0242424242424244,1.5242424242424242,95.0,66000.0,False,0.0,"0.363636, 0.363636, 0.181818, 0.090909",Initial-sleep marginal estimate; not a horizon-average energy forecast.
+CONFLICT,Emergency,200,1.0,5G NR,0.12001600000000001,0.500048,99.0,100000000.0,True,0.0,"0.363636, 0.363636, 0.181818, 0.090909",Initial-sleep marginal estimate; not a horizon-average energy forecast.
